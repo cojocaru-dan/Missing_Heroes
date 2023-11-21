@@ -8,7 +8,13 @@ for (const movie of movies) {
         movie.director = "Martin Scorsese";
     }
 }
-console.log(movies);
+
+for (let i = 0; i < movies.length; i++) {
+    if (movies[i]["director"].includes("Martin Scorsese")) {
+        console.log("movies with martin director", movies[i]);
+    }
+}
+// console.log(movies);
 
 for (const movie of movies) {
     if (movie.title === "Beetlejuice") {
@@ -24,7 +30,7 @@ for (const movie of movies) {
     }
 }
 
-console.log(movies);
+// console.log(movies);
 
 for (const movie of movies) {
     for (let i = 0; i < movie["actors"].length; i++) {
@@ -34,7 +40,7 @@ for (const movie of movies) {
     }
 }
 
-console.log(movies);
+// console.log(movies);
 
 for (const movie of movies) {
     for (let i = 0; i < movie["genres"].length; i++) {
@@ -44,7 +50,7 @@ for (const movie of movies) {
     }
 }
 
-console.log(movies);
+// console.log(movies);
 
 let allActors = [];
 
@@ -52,7 +58,7 @@ for (const movie of movies) {
   allActors = allActors.concat(movie.actors);
 }
 
-allActors = Array.from(new Set(allActors));
+// allActors = Array.from(new Set(allActors));
 let allTheActors = allActors.length;
 console.log(allTheActors);
 
